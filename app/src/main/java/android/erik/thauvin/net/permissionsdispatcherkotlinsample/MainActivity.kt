@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             if (phone.isNullOrBlank()) {
                 Snackbar.make(view, "Please enter a phone number", Snackbar.LENGTH_LONG).setAction("Action", null).show()
             } else {
-                MainActivityPermissionsDispatcher.callWithCheck(this@MainActivity, phone)
+                MainActivityPermissionsDispatcher.`call$app_compileDebugKotlinWithCheck`(this@MainActivity, phone)
             }
         }
     }
