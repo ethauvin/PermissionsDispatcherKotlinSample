@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             if (phone.isNullOrBlank()) {
                 Snackbar.make(view, "Please enter a phone number", Snackbar.LENGTH_LONG).setAction("Action", null).show()
             } else {
-                MainActivityPermissionsDispatcher.`call$app_compileDebugKotlinWithCheck`(this@MainActivity, phone)
+                MainActivityPermissionsDispatcher.callWithCheck(this@MainActivity, phone)
             }
         }
     }
@@ -63,8 +63,9 @@ class MainActivity : AppCompatActivity() {
         MainActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults)
     }
 
+    // See: https://github.com/hotchemi/PermissionsDispatcher/issues/171
     @NeedsPermission(Manifest.permission.CALL_PHONE)
-    internal fun call(phone: String) {
+    fun call(phone: String) {
         val callIntent = Intent(Intent.ACTION_CALL)
         callIntent.data = Uri.parse("tel:" + phone)
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
