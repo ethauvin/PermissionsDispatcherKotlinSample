@@ -6,7 +6,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "android.erik.thauvin.net.permissionsdispatcherkotlinsample"
+        applicationId "net.thauvin.erik.android.permissionsdispatcherkotlinsample"
         minSdkVersion 23
         targetSdkVersion 24
         versionCode 1

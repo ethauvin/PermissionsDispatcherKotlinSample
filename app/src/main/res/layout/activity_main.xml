@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="android.erik.thauvin.net.permissionsdispatcherkotlinsample.MainActivity">
+    tools:context="net.thauvin.erik.android.permissionsdispatcherkotlinsample.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
